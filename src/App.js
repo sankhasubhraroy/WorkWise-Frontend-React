@@ -1,5 +1,7 @@
+import AnimatedRoutes from "./components/AnimatedRoutes";
+
 const App = () => {
-  return <div></div>;
+  return <AnimatedRoutes />;
 };
 
 export default App;

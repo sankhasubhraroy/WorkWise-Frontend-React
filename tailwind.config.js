@@ -38,6 +38,30 @@ export default {
         secondary: "#e9e6ed",
         backdrop: "#000000e1",
       },
+      backgroundImage: {
+        midnight:
+          "linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)",
+        electricGrass:
+          "linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%)",
+        paleOcean:
+          "linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%)",
+        dusk: "linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%)",
+        bordeaux:
+          "linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%)",
+        blushPurple:
+          "linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%)",
+        coolToWarm:
+          "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+        matt: "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+        tomato:
+          "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+        pumkin:
+          "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+        greenCyan:
+          "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+        blushPurple2:
+          "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+      },
       textColor: {
         primary: "#fff",
         secondary: "#515151",

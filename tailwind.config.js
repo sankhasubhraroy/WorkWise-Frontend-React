@@ -36,11 +36,22 @@ export default {
       backgroundColor: {
         primary: "#7F54B3",
         secondary: "#e9e6ed",
+        backdrop: "#000000e1",
       },
       textColor: {
         primary: "#fff",
         secondary: "#515151",
         subtext: "#767676",
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
       },
     },
   },

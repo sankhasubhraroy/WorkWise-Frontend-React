@@ -54,7 +54,7 @@ const ScrollSlider = ({ minDisplay = 1, children }) => {
   }, [slidesToShow]);
 
   // Amount of width should be on transition during scrolling
-  const transX = useTransform(springScrollY, [200, 240], [0, -x]);
+  const transX = useTransform(springScrollY, [40, 440], [0, -x]);
 
   // Styles for carousel and slides
   const trackStyle = {

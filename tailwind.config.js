@@ -14,6 +14,7 @@ export default {
           pink: "#f78da7",
           greenCyan: "#7bdcb5",
           cyanBlue: "#8ed1fc",
+          purple: "#6787FE",
         },
         vivid: {
           red: "#cf2e2e",
@@ -66,6 +67,10 @@ export default {
         primary: "#fff",
         secondary: "#515151",
         subtext: "#767676",
+      },
+      borderColor: {
+        primary: "#d6d6d6",
+        secondary: "#F1F1F1",
       },
       container: {
         center: true,

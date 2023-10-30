@@ -15,6 +15,7 @@ export default {
           greenCyan: "#7bdcb5",
           cyanBlue: "#8ed1fc",
           purple: "#6787FE",
+          sky: "#2261E81A",
         },
         vivid: {
           red: "#cf2e2e",

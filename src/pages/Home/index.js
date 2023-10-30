@@ -1,3 +1,4 @@
+import CallToAction from "../../components/CallToAction";
 import Achievements from "./Achievements";
 import Brands from "./Brands";
 import Features from "./Features";
@@ -12,6 +13,7 @@ const Home = () => {
       <Skills />
       <Features />
       <Achievements />
+      <CallToAction />
       <div>This is home</div>
     </>
   );

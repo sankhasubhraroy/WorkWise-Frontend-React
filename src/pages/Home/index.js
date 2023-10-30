@@ -1,3 +1,4 @@
+import BackToTop from "../../components/BackToTop";
 import CallToAction from "../../components/CallToAction";
 import Achievements from "./Achievements";
 import Brands from "./Brands";
@@ -14,7 +15,7 @@ const Home = () => {
       <Features />
       <Achievements />
       <CallToAction />
-      <div>This is home</div>
+      <BackToTop />
     </>
   );
 };

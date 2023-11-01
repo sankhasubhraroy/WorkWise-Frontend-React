@@ -12,12 +12,15 @@ import { Link, Outlet } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import MobieMenu from "./MobieMenu";
 import Backdrop from "./Backdrop";
+import { useModal } from "../../contexts/modalContext";
+import Auth from "../../components/Auth";
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const isTablet = useMediaQuery("(max-width: 768px)");
   const { scrollY } = useScroll();
   const [scroll, setScroll] = useState(0);
+  const { openModal } = useModal();
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -58,7 +61,10 @@ const Navbar = () => {
               </ul>
             )}
 
-            <button className="text-white bg-vivid-cyanBlue px-4 py-2 rounded-full">
+            <button
+              className="text-white bg-vivid-cyanBlue px-4 py-2 rounded-full"
+              onClick={() => openModal(<Auth />)}
+            >
               Join
             </button>
           </div>

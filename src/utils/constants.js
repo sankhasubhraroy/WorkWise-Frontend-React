@@ -29,4 +29,16 @@ const footerLinks = {
   ],
 };
 
-export { navLinks, footerLinks };
+const loginFields = [
+  { label: "email", type: "email", name: "email" },
+  { label: "password", type: "password", name: "password" },
+];
+
+const registerFields = [
+  { label: "name", type: "text", name: "name" },
+  { label: "email", type: "email", name: "email" },
+  { label: "password", type: "password", name: "password" },
+  { label: "confirm password", type: "password", name: "confirmPassword" },
+];
+
+export { navLinks, footerLinks, loginFields, registerFields };

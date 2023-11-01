@@ -33,7 +33,7 @@ const Modal = () => {
         exit="hidden"
         variants={modalVariants}
         onClick={(e) => e.stopPropagation()}
-        className="MODAL relative sm:rounded-xl overflow-hidden"
+        className="MODAL relative rounded-xl overflow-hidden"
       >
         {modalContent}
 

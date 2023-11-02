@@ -1,3 +1,10 @@
+import {
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaRegAddressBook,
+  FaRegEnvelope,
+} from "react-icons/fa";
+
 const navLinks = [
   { title: "Home", url: "/" },
   { title: "About", url: "/about" },
@@ -41,4 +48,31 @@ const registerFields = [
   { label: "confirm password", type: "password", name: "confirmPassword" },
 ];
 
-export { navLinks, footerLinks, loginFields, registerFields };
+const infoLists = [
+  {
+    accent: "#9b51e0",
+    icon: <FaRegAddressBook />,
+    heading: "Address",
+    body: "Sunview Park, Asansol, Paschim Bardhaman, West Bengal, 713303, India.",
+  },
+  {
+    accent: "#00d084",
+    icon: <FaRegEnvelope />,
+    heading: "Email",
+    body: "contact@workwise.com, support@workwise.com",
+  },
+  {
+    accent: "#F78F0E",
+    icon: <FaPhoneAlt />,
+    heading: "Contact",
+    body: "+91-202-555-0105, +91-202-555-01",
+  },
+  {
+    accent: "#dc3545",
+    icon: <FaMapMarkerAlt />,
+    heading: "Location",
+    body: "Sunview Park, Asansol, Paschim Bardhaman, West Bengal, 713303, India.",
+  },
+];
+
+export { navLinks, footerLinks, loginFields, registerFields, infoLists };

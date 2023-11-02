@@ -69,6 +69,11 @@ export default {
         secondary: "#515151",
         subtext: "#767676",
       },
+      borderWidth: {
+        2.5: "2.5px",
+        3: "3px",
+        3.5: "3.5px",
+      },
       borderColor: {
         primary: "#d6d6d6",
         secondary: "#F1F1F1",

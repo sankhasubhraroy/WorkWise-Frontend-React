@@ -48,6 +48,25 @@ const registerFields = [
   { label: "confirm password", type: "password", name: "confirmPassword" },
 ];
 
+const contactFields = [
+  { label: "your name", type: "text", name: "name" },
+  { label: "your email", type: "email", name: "email" },
+  {
+    label: "subject",
+    type: "select",
+    name: "subject",
+    options: [
+      "Feedback",
+      "Sponsorship",
+      "Pricing related queries",
+      "Payment related issue",
+      "Review related queries",
+      "Other",
+    ],
+  },
+  { label: "message", type: "textarea", name: "message" },
+];
+
 const infoLists = [
   {
     accent: "#9b51e0",
@@ -75,4 +94,11 @@ const infoLists = [
   },
 ];
 
-export { navLinks, footerLinks, loginFields, registerFields, infoLists };
+export {
+  navLinks,
+  footerLinks,
+  loginFields,
+  registerFields,
+  contactFields,
+  infoLists,
+};

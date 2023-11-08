@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Field from "./Field";
 
-const Form = ({ fields, name, data = {}, onSubmit }) => {
+const Form = ({ fields, name, data = {}, onSubmit, bordered = false }) => {
   const [formData, setFormData] = useState(data);
 
   const handleChange = (e) => {
@@ -35,8 +35,10 @@ const Form = ({ fields, name, data = {}, onSubmit }) => {
           label={field.label}
           type={field.type}
           name={field.name}
+          options={field.options}
           value={formData[field.name]}
           onChange={handleChange}
+          bordered={bordered}
         />
       ))}
 

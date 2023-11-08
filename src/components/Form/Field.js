@@ -16,7 +16,15 @@ const labelVariants = {
   },
 };
 
-const Field = ({ label, type, name, value = "", onChange }) => {
+const Field = ({
+  label,
+  type,
+  name,
+  value = "",
+  options,
+  onChange,
+  bordered,
+}) => {
   const id = label?.replace(" ", "-").toLowerCase();
   const [isActive, setIsActive] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -46,14 +54,14 @@ const Field = ({ label, type, name, value = "", onChange }) => {
       <motion.label
         htmlFor={id}
         initial={false}
-        animate={isActive ? "active" : "rest"}
+        animate={type === "date" ? "active" : isActive ? "active" : "rest"}
         variants={labelVariants}
         className="capitalize text-secondary absolute"
       >
         {label}
       </motion.label>
 
-      {type !== "textarea" && (
+      {type !== "textarea" && type !== "select" && (
         <input
           id={id}
           type={showPassword ? "text" : type}
@@ -62,7 +70,9 @@ const Field = ({ label, type, name, value = "", onChange }) => {
           onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          className="outline-none px-4 py-2 rounded-full w-full"
+          className={`outline-none px-4 py-2 rounded-full w-full ${
+            bordered && "border-2 border-primary"
+          }`}
         />
       )}
 
@@ -74,8 +84,31 @@ const Field = ({ label, type, name, value = "", onChange }) => {
           onChange={onChange}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          className="resize-none outline-none px-4 py-2 rounded-full w-full"
+          className={`resize-none outline-none px-4 py-2 rounded-full w-full ${
+            bordered && "border-2 border-primary"
+          }`}
         ></textarea>
+      )}
+
+      {type === "select" && (
+        <select
+          id={id}
+          name={name}
+          value={value}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          className={`outline-none px-4 py-2 rounded-full w-full ${
+            bordered && "border-2 border-primary"
+          }`}
+        >
+          <option value="" hidden></option>
+          {options.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       )}
 
       {type === "password" && (

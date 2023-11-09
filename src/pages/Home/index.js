@@ -1,6 +1,6 @@
 import BackToTop from "../../components/BackToTop";
 import CallToAction from "../../components/CallToAction";
-import Achievements from "./Achievements";
+import Achievements from "../../components/Achievements";
 import Brands from "./Brands";
 import Features from "./Features";
 import Hero from "./Hero";

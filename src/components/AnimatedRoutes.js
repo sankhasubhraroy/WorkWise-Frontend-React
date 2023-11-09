@@ -4,6 +4,8 @@ import Navbar from "../layouts/Navbar";
 import Footer from "../layouts/Footer";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
+import About from "../pages/About";
+import Service from "../pages/Service";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -22,8 +24,8 @@ const AnimatedRoutes = () => {
             }
           >
             <Route index element={<Home />} />
-            <Route path="about" />
-            <Route path="service" />
+            <Route path="about" element={<About />} />
+            <Route path="service" element={<Service />} />
             <Route path="contact" element={<Contact />} />
           </Route>
         </Routes>

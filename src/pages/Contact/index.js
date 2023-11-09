@@ -1,4 +1,5 @@
 import BreadCrumb from "../../components/BreadCrumb";
+import CallToAction from "../../components/CallToAction";
 import Map from "../../components/Map";
 import ContactForm from "./ContactForm";
 import Info from "./Info";
@@ -19,6 +20,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <CallToAction />
     </>
   );
 };

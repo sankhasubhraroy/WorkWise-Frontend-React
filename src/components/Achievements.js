@@ -1,4 +1,4 @@
-import Counter from "../../components/Counter";
+import Counter from "./Counter";
 import { FaRegUser, FaRegFile, FaRegStar, FaOpencart } from "react-icons/fa";
 
 const Card = ({ accent, icon, suffix, body, from = 0, to = 100 }) => {

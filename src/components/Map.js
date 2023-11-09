@@ -13,7 +13,7 @@ const Map = ({ coordinates, zoom = 13 }) => {
       <MapContainer
         center={coordinates}
         zoom={zoom}
-        style={{ height: "100%", width: "100%" }}
+        style={{ height: "100%", width: "100%", zIndex: 0 }}
         scrollWheelZoom
       >
         <TileLayer

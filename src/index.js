@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ModalProvider } from "./contexts/modalContext";
 import { ScreenContextProvider } from "./contexts/screenContext";
+import { ScrollProvider } from "./contexts/scrollContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,7 +14,9 @@ root.render(
     <BrowserRouter>
       <ModalProvider>
         <ScreenContextProvider>
-          <App />
+          <ScrollProvider>
+            <App />
+          </ScrollProvider>
         </ScreenContextProvider>
       </ModalProvider>
     </BrowserRouter>

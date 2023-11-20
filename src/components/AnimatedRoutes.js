@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Service from "../pages/Service";
+import Account from "../pages/account";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -27,6 +28,20 @@ const AnimatedRoutes = () => {
             <Route path="about" element={<About />} />
             <Route path="service" element={<Service />} />
             <Route path="contact" element={<Contact />} />
+            <Route
+              path="account"
+              element={
+                <>
+                  <Account />
+                </>
+              }
+            >
+              <Route path="dashboard" element={<div>dashboard</div>} />
+              <Route path="profile" element={<div>profile</div>} />
+              <Route path="messages" element={<div>messages</div>} />
+              <Route path="works" element={<div>works</div>} />
+              <Route path="wallet" element={<div>wallet</div>} />
+            </Route>
           </Route>
         </Routes>
       </AnimatePresence>

@@ -5,11 +5,25 @@ import {
   FaRegEnvelope,
 } from "react-icons/fa";
 
+import { MdOutlineHome } from "react-icons/md";
+import { BiUser } from "react-icons/bi";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
+import { TbLayoutDashboard } from "react-icons/tb";
+import { PiWalletBold } from "react-icons/pi";
+
 const navLinks = [
   { title: "Home", url: "/" },
   { title: "About", url: "/about" },
   { title: "Service", url: "/service" },
   { title: "Contact", url: "/contact" },
+];
+
+const sideLinks = [
+  { title: "Dashboard", url: "dashboard", icon: <MdOutlineHome /> },
+  { title: "Profile", url: "profile", icon: <BiUser /> },
+  { title: "Messages", url: "messages", icon: <HiOutlineChatAlt2 /> },
+  { title: "Works", url: "works", icon: <TbLayoutDashboard /> },
+  { title: "Wallet", url: "wallet", icon: <PiWalletBold /> },
 ];
 
 const footerLinks = {
@@ -94,11 +108,15 @@ const infoLists = [
   },
 ];
 
+const simpleNavRoutes = ["account"];
+
 export {
   navLinks,
+  sideLinks,
   footerLinks,
   loginFields,
   registerFields,
   contactFields,
   infoLists,
+  simpleNavRoutes,
 };

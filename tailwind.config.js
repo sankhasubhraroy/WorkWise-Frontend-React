@@ -118,6 +118,9 @@ export default {
         224: "56rem",
         240: "60rem",
       },
+      boxShadow: {
+        nav: "0 18px 40px -30px rgba(35,38,58,.50)",
+      },
     },
   },
   plugins: [],

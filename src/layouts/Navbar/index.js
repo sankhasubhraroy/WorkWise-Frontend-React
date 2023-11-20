@@ -7,8 +7,8 @@ import {
 import { useState } from "react";
 import Hamburger from "./Hamburger";
 import BrandLogo from "./BrandLogo";
-import { navLinks } from "../../utils/constants";
-import { Link, Outlet } from "react-router-dom";
+import { navLinks, simpleNavRoutes } from "../../utils/constants";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import MobieMenu from "./MobieMenu";
 import Backdrop from "./Backdrop";
@@ -21,6 +21,9 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [scroll, setScroll] = useState(0);
   const { openModal } = useModal();
+  const location = useLocation();
+  const path = location.pathname.split("/")[1];
+  const simple = simpleNavRoutes.includes(path);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -34,7 +37,11 @@ const Navbar = () => {
     <>
       <header
         className={`w-full z-[1] transition-colors duration-300 ease-in-out ${
-          isTablet || scroll > 0 ? "fixed bg-white" : "absolute bg-transparent"
+          scroll > 0
+            ? "fixed bg-white shadow-nav"
+            : simple || isTablet
+            ? "fixed bg-white"
+            : "absolute bg-transparent"
         }`}
       >
         <motion.nav
@@ -43,14 +50,14 @@ const Navbar = () => {
         >
           <div className="flex gap-4">
             {isTablet && <Hamburger toggle={toggleNav} />}
-            <BrandLogo scroll={scroll} />
+            <BrandLogo scroll={scroll} simple={simple} />
           </div>
 
           <div className="flex items-center gap-16">
             {!isTablet && (
               <ul
                 className={`flex gap-8 transition-colors duration-300 ease-in-out ${
-                  scroll > 0 ? "text-secondary" : "text-primary"
+                  simple || scroll > 0 ? "text-secondary" : "text-primary"
                 }`}
               >
                 {navLinks.map((link) => (

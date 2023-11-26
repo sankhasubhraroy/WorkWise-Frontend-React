@@ -7,7 +7,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const Counter = ({ from, to, duration }) => {
+const Counter = ({ from = 0, to, duration = 3 }) => {
   const countRef = useRef(null);
   const isInView = useInView(countRef, { once: true });
   const count = useMotionValue(from);

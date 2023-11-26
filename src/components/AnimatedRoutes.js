@@ -7,6 +7,7 @@ import Contact from "../pages/Contact";
 import About from "../pages/About";
 import Service from "../pages/Service";
 import Account from "../pages/account";
+import Dashboard from "../pages/account/Dashboard";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -36,7 +37,7 @@ const AnimatedRoutes = () => {
                 </>
               }
             >
-              <Route path="dashboard" element={<div>dashboard</div>} />
+              <Route path="dashboard" element={<Dashboard />} />
               <Route path="profile" element={<div>profile</div>} />
               <Route path="messages" element={<div>messages</div>} />
               <Route path="works" element={<div>works</div>} />
